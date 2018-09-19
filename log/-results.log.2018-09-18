@@ -1,0 +1,52 @@
+{"message":"We are live on 8080","level":"info"}
+{"message":"We are live on 8080","level":"info"}
+{"message":"Follow up question","level":"info"}
+{"message":"We are live on 8080","level":"info"}
+{"message":"Follow up question","level":"info"}
+{"level":"error","message":"Error in getting data while posting question"}
+{"message":"Error in posting question: failed to connect to server [mongo:27017] on first connect [MongoNetworkError: getaddrinfo ENOTFOUND mongo mongo:27017]","level":"error"}
+{"message":"Error while getting data to update while posting answer: failed to connect to server [mongo:27017] on first connect [MongoNetworkError: getaddrinfo ENOTFOUND mongo mongo:27017]","level":"error"}
+{"message":"Error in posting answer:failed to connect to server [mongo:27017] on first connect [MongoNetworkError: getaddrinfo ENOTFOUND mongo mongo:27017]","level":"error"}
+{"message":"We are live on 8080","level":"info"}
+{"message":"Error while getting data to update while posting answer: failed to connect to server [mongo:27017] on first connect [MongoNetworkError: getaddrinfo ENOTFOUND mongo mongo:27017]","level":"error"}
+{"message":"Error in posting answer:failed to connect to server [mongo:27017] on first connect [MongoNetworkError: getaddrinfo ENOTFOUND mongo mongo:27017]","level":"error"}
+{"level":"error","message":"Error in updating question"}
+{"message":"Error updating question status: failed to connect to server [mongo:27017] on first connect [MongoNetworkError: getaddrinfo ENOTFOUND mongo mongo:27017]","level":"error"}
+{"level":"info","message":"Get notification for"}
+{"level":"error","message":"Error in getting the user notifications"}
+{"message":"Error in getting user notification: failed to connect to server [mongo:27017] on first connect [MongoNetworkError: getaddrinfo ENOTFOUND mongo mongo:27017]","level":"error"}
+{"message":"We are live on 8080","level":"info"}
+{"level":"error","message":"Error in getting question data"}
+{"message":"Error in getting data for specific question: failed to connect to server [mongo:27017] on first connect [MongoNetworkError: getaddrinfo ENOTFOUND mongo mongo:27017]","level":"error"}
+{"message":"Getting contributions for user  6a59c5b7-f043-4be7-ba26-f12fd084418a and role:undefined","level":"info"}
+{"message":"Errored out in getting user contributions: failed to connect to server [mongo:27017] on first connect [MongoNetworkError: getaddrinfo ENOTFOUND mongo mongo:27017]","level":"error"}
+{"message":"Error in getting user contributions: failed to connect to server [mongo:27017] on first connect [MongoNetworkError: getaddrinfo ENOTFOUND mongo mongo:27017]","level":"error"}
+{"message":"Errored out in getting all the questions : failed to connect to server [mongo:27017] on first connect [MongoNetworkError: getaddrinfo ENOTFOUND mongo mongo:27017]","level":"error"}
+{"message":"Error in getting all questions: failed to connect to server [mongo:27017] on first connect [MongoNetworkError: getaddrinfo ENOTFOUND mongo mongo:27017]","level":"error"}
+{"questionId":"5b9fa7d5d05bd6001fc9db0d","subquestionId":"5b9fa805d05bd6001fc9db0e.1","answertext":"answer differs from 123","userName":"prof4","level":"info","message":"Update profile for user"}
+{"message":"We are live on 8080","level":"info"}
+{"questionId":"5b9fa7d5d05bd6001fc9db0d","subquestionId":"5b9fa805d05bd6001fc9db0e.1","answertext":"answer differs from 123","userName":"prof4","level":"info","message":"Update profile for user"}
+{"questionId":"5b9fa7d5d05bd6001fc9db0d","subquestionId":"5b9fa805d05bd6001fc9db0e.1","answertext":"answer differs from 123","userName":"prof4","level":"info","message":"Update profile for user"}
+{"message":"We are live on 8080","level":"info"}
+{"message":"We are live on 8080","level":"info"}
+{"level":"info","message":"Get profile for user"}
+{"level":"error"}
+{"message":"Error in get profile: Cannot read property '0' of undefined","level":"error"}
+{"level":"info","message":"Get profile for user"}
+{"errno":"ENOTFOUND","code":"ENOTFOUND","syscall":"getaddrinfo","hostname":"graph.windows.net","host":"graph.windows.net","port":443,"level":"error"}
+{"message":"Error in get profile: getaddrinfo ENOTFOUND graph.windows.net graph.windows.net:443","level":"error"}
+{"questionId":"5b9fa7d5d05bd6001fc9db0d","subquestionId":"5b9fa805d05bd6001fc9db0e.1","answertext":"answer differs from 123","userName":"prof4","level":"info","message":"Update profile for user"}
+{"message":"We are live on 8080","level":"info"}
+{"questionId":"5b9fa7d5d05bd6001fc9db0d","subquestionId":"5b9fa805d05bd6001fc9db0e.1","answertext":"answer differs from 123","userName":"prof4","level":"info","message":"Update profile for user"}
+{"level":"error","message":"Error updating profile"}
+{"message":"Error in updating profile: Cannot read property 'error' of undefined","level":"error"}
+{"message":"We are live on 8080","level":"info"}
+{"givenName":"Srilekha..","level":"info","message":"Update profile for user"}
+{"level":"error","message":"Error updating profile"}
+{"message":"Error in updating profile: getaddrinfo ENOTFOUND graph.windows.net graph.windows.net:443","level":"error"}
+{"message":"We are live on 8080","level":"info"}
+{"message":"We are live on 8080","level":"info"}
+{"message":"We are live on 8080","level":"info"}
+{"message":"We are live on 8080","level":"info"}
+{"message":"We are live on 8080","level":"info"}
+{"message":"We are live on 8080","level":"info"}

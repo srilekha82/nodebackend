@@ -1,0 +1,594 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "idvicebackendrequests",
+    "description": "Backend requests for the idviceApp"
+  },
+  "host": "localhost:8080",
+  "basePath": "/",
+  "securityDefinitions": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "implicit",
+      "authorizationUrl": "http://localhost:8080",
+      "scopes": {}
+    }
+  },
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/question": {
+      "post": {
+        "description": "Request body :\nusername\nquestion text\nquestion id and answerid to which there is a followup question",
+        "summary": "Post a followup question for an answer",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "QuestionPost2",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "name": "Content-Type",
+          "in": "header",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }, {
+          "name": "Accept",
+          "in": "header",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }, {
+          "name": "Body",
+          "in": "body",
+          "required": true,
+          "description": "",
+          "schema": {
+            "$ref": "#/definitions/PostAFollowupQuestionForAnAnswerrequest"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [{
+          "auth": []
+        }]
+      }
+    },
+    "/answer": {
+      "post": {
+        "description": "request body\n username, answertext, questionid and subquestion id to which answer is created",
+        "summary": "followup answer",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "AnswerPost2",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "name": "Content-Type",
+          "in": "header",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }, {
+          "name": "Accept",
+          "in": "header",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }, {
+          "name": "Body",
+          "in": "body",
+          "required": true,
+          "description": "",
+          "schema": {
+            "$ref": "#/definitions/FollowupAnswerrequest"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [{
+          "auth": []
+        }]
+      }
+    },
+    "/getSpecificQuestion/5ba1ff24f42c6e002e0203c1": {
+      "get": {
+        "description": "",
+        "summary": "getspecificquestion given id",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "GetSpecificQuestion5ba1ff24f42c6e002e0203c1Get",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "name": "Content-Type",
+          "in": "header",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }, {
+          "name": "Accept",
+          "in": "header",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [{
+          "auth": []
+        }]
+      }
+    },
+    "/getAllQuestions": {
+      "get": {
+        "description": "Queryparams as category and subcatregory",
+        "summary": "Get All questions for subcat/category",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "GetAllQuestionsGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "name": "categoryId",
+          "in": "query",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }, {
+          "name": "subCategoryId",
+          "in": "query",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }, {
+          "name": "Content-Type",
+          "in": "header",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }, {
+          "name": "Accept",
+          "in": "header",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [{
+          "auth": []
+        }]
+      }
+    },
+    "/categories": {
+      "get": {
+        "description": "returns list of category/subcategory json",
+        "summary": "get all categories/subcategories",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "CategoriesGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "name": "Accept",
+          "in": "header",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }, {
+          "name": "Content-Type",
+          "in": "header",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [{
+          "auth": []
+        }]
+      }
+    },
+    "/updateQuestionStatus/5ba1ff24f42c6e002e0203c1": {
+      "put": {
+        "description": "Put request body\n - status value",
+        "summary": "update a question",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "UpdateQuestionStatus5ba1ff24f42c6e002e0203c1Put",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "name": "Content-Type",
+          "in": "header",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }, {
+          "name": "Accept",
+          "in": "header",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }, {
+          "name": "Body",
+          "in": "body",
+          "required": true,
+          "description": "",
+          "schema": {
+            "$ref": "#/definitions/UpdateAQuestionrequest"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [{
+          "auth": []
+        }]
+      }
+    },
+    "/myContributions/d895e5c0-7ace-41db-90d6-7b9144f387a9": {
+      "get": {
+        "description": "the user id in request url",
+        "summary": "getContributions given the userid",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "MyContributionsD895e5c07ace41db90d67b9144f387a9Get",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "name": "Content-Type",
+          "in": "header",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }, {
+          "name": "Accept",
+          "in": "header",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [{
+          "auth": []
+        }]
+      }
+    },
+    "/notification/afadc5b2-c756-48bd-9c6c-f3431a24b232": {
+      "get": {
+        "description": "given userid",
+        "summary": "getNotification for user",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "NotificationAfadc5b2C75648bd9c6cF3431a24b232Get",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "name": "Content-Type",
+          "in": "header",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }, {
+          "name": "Accept",
+          "in": "header",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [{
+          "auth": []
+        }]
+      }
+    },
+    "/getProfile/d895e5c0-7ace-41db-90d6-7b9144f387a9": {
+      "get": {
+        "description": "User id",
+        "summary": "Get user profile",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "GetProfileD895e5c07ace41db90d67b9144f387a9Get",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "name": "Content-Type",
+          "in": "header",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }, {
+          "name": "Accept",
+          "in": "header",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [{
+          "auth": []
+        }]
+      }
+    },
+    "/updateProfile/d895e5c0-7ace-41db-90d6-7b9144f387a9": {
+      "post": {
+        "description": "",
+        "summary": "Update profile",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "UpdateProfileD895e5c07ace41db90d67b9144f387a9Post",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [{
+          "name": "Content-Type",
+          "in": "header",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }, {
+          "name": "Accept",
+          "in": "header",
+          "required": true,
+          "type": "string",
+          "description": ""
+        }, {
+          "name": "Body",
+          "in": "body",
+          "required": true,
+          "description": "",
+          "schema": {
+            "$ref": "#/definitions/UpdateProfilerequest"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [{
+          "auth": []
+        }]
+      }
+    }
+  },
+  "definitions": {
+    "PostQuestionRequest": {
+      "title": "PostQuestionRequest",
+      "example": {
+        "userName": "Idvice student1",
+        "textQuestion": "Test question 178",
+        "categoryId": "TestCategory",
+        "subCategoryId": "TestSubcategory"
+      },
+      "type": "object",
+      "properties": {
+        "userName": {
+          "description": "",
+          "example": "Idvice student1",
+          "type": "string"
+        },
+        "textQuestion": {
+          "description": "",
+          "example": "Test question 178",
+          "type": "string"
+        },
+        "categoryId": {
+          "description": "",
+          "example": "TestCategory",
+          "type": "string"
+        },
+        "subCategoryId": {
+          "description": "",
+          "example": "TestSubcategory",
+          "type": "string"
+        }
+      },
+      "required": [
+        "userName",
+        "textQuestion",
+        "categoryId",
+        "subCategoryId"
+      ]
+    },
+    "PostAnswerrequest": {
+      "title": "Post AnswerRequest",
+      "example": {
+        "userName": "Idvice prof1",
+        "answerText": "Test answer to test",
+        "questionId": "5ba1ff24f42c6e002e0203c1"
+      },
+      "type": "object",
+      "properties": {
+        "userName": {
+          "description": "",
+          "example": "Idvice prof1",
+          "type": "string"
+        },
+        "answerText": {
+          "description": "",
+          "example": "Test answer to test",
+          "type": "string"
+        },
+        "questionId": {
+          "description": "",
+          "example": "5ba1ff24f42c6e002e0203c1",
+          "type": "string"
+        }
+      },
+      "required": [
+        "userName",
+        "answerText",
+        "questionId"
+      ]
+    },
+    "UpdateAQuestionrequest": {
+      "title": "update a questionRequest",
+      "example": {
+        "status": "resolved"
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "example": "resolved",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status"
+      ]
+    },
+    "PostAFollowupQuestionForAnAnswerrequest": {
+      "title": "Post a followup question for an answerRequest",
+      "example": {
+        "userName": "Idvice student1",
+        "subQuestionText": "follow up question",
+        "questionId": "5ba1ff24f42c6e002e0203c1",
+        "answerId": "5ba1ff7af42c6e002e0203c2"
+      },
+      "type": "object",
+      "properties": {
+        "userName": {
+          "description": "",
+          "example": "Idvice student1",
+          "type": "string"
+        },
+        "subQuestionText": {
+          "description": "",
+          "example": "follow up question",
+          "type": "string"
+        },
+        "questionId": {
+          "description": "",
+          "example": "5ba1ff24f42c6e002e0203c1",
+          "type": "string"
+        },
+        "answerId": {
+          "description": "",
+          "example": "5ba1ff7af42c6e002e0203c2",
+          "type": "string"
+        }
+      },
+      "required": [
+        "userName",
+        "subQuestionText",
+        "questionId",
+        "answerId"
+      ]
+    },
+    "FollowupAnswerrequest": {
+      "title": "followup answerRequest",
+      "example": {
+        "userName": "Idvice prof1",
+        "answerText": "Tfollow up",
+        "questionId": "5ba1ff24f42c6e002e0203c1",
+        "subQuestionId": "5ba1ff7af42c6e002e0203c2.1"
+      },
+      "type": "object",
+      "properties": {
+        "userName": {
+          "description": "",
+          "example": "Idvice prof1",
+          "type": "string"
+        },
+        "answerText": {
+          "description": "",
+          "example": "Tfollow up",
+          "type": "string"
+        },
+        "questionId": {
+          "description": "",
+          "example": "5ba1ff24f42c6e002e0203c1",
+          "type": "string"
+        },
+        "subQuestionId": {
+          "description": "",
+          "example": "5ba1ff7af42c6e002e0203c2.1",
+          "type": "string"
+        }
+      },
+      "required": [
+        "userName",
+        "answerText",
+        "questionId",
+        "subQuestionId"
+      ]
+    },
+    "UpdateProfilerequest": {
+      "title": "Update profileRequest",
+      "example": {
+        "givenName": "Test_ Name"
+      },
+      "type": "object",
+      "properties": {
+        "givenName": {
+          "description": "",
+          "example": "Test_ Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "givenName"
+      ]
+    }
+  }
+}

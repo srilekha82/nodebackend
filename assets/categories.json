@@ -1,0 +1,26 @@
+[{
+	"categoryName": "abc",
+	"categoryId": "catAbId",
+	"subcategories": [{
+			"subcategoryName": "subName",
+			"subCategoryId": "subId"
+		},
+		{
+			"subcategoryName": "subNameA",
+			"subCategoryId": "subId1"
+		}
+	]
+}, {
+	"categoryName": "def",
+	"categoryId": "catbecId",
+	"subcategories": [{
+			"subcategoryName": "subName",
+			"subCategoryId": "subId"
+		},
+		{
+			"subcategoryName": "subNameA",
+			"subCategoryId": "subId1"
+		}
+	]
+
+}]
